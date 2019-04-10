@@ -1,8 +1,8 @@
 # school-president
 
-[Vue3 文档][Vue3 文档]
+[Vue-cli3 文档][Vue-cli3 文档]
 
-天才第一步，Vue3.5 初体验
+天才第一步，Vue-cli3.5 初体验
 
 | date | version | operator | remark |
 | - | - | - | - |
@@ -11,10 +11,10 @@
 | | | | 3 新增章节《关于本项目》 |
 
 ## 目录
-+ 与 Vue2 有哪些异同
++ 与 Vue-cli2 有哪些异同
 + 关于本项目
 
-## 与 Vue2 有哪些异同
+## 与 Vue-cli2 有哪些异同
 ### 安装
 Vue CLI 的包名称由 `vue-cli` 改成了 `@vue/cli`。
 
@@ -23,7 +23,7 @@ Vue CLI 需要 Node.js 8.9 或更高版本。
 官方文档推荐卸载老版本的 `vue-cli`，我仗着idea创建项目可选vue版本就没卸载
 
 ### 配置
-Vue3 引入了一个特别方便的图形化界面
+Vue-cli3 引入了一个特别方便的图形化界面
 ```
 $ vue ui
 ```
@@ -38,4 +38,4 @@ $ vue ui
 原本想法是做一个文字游戏，具体游戏内容和《监狱大亨》差不多，区别在于是《学校大亨》，由于是模拟经营游戏，所以游戏界面设置也就和一般的“xx管理系统”很类似了
 
 [^_^]: # (变量区)
-[Vue3 文档]: https://cli.vuejs.org/zh/
+[Vue-cli3 文档]: https://cli.vuejs.org/zh/
