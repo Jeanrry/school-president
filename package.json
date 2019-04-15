@@ -9,8 +9,15 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "element-ui": "^2.7.2",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
+    "vue-wechat-title": "^2.0.5",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -18,7 +25,7 @@
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.5.21"
   },
@@ -31,7 +38,6 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }
