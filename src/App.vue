@@ -1,36 +1,63 @@
 <template>
   <div id="app">
     <el-container style="height: 100%">
-      <el-header>Header</el-header>
+      <el-header style="padding: 0">
+        <el-menu
+            mode="horizontal"
+            @select="handleSelect"
+            background-color="#9B90C2"
+            text-color="#fff"
+            active-text-color="#C6C0C8">
+          <img style="float: left; width: 40px; height: 40px; margin: 10px 10px 10px 40px" src="@/assets/logo.png" class="app-logo-img" alt="logo"/>
+          <el-menu-item index="0" style="margin-left: 20px">处理中心</el-menu-item>
+          <el-menu-item index="1" style="float: right; margin-right: 20px">处理中心</el-menu-item>
+          <el-submenu index="2" style="float: right">
+            <template slot="title">我的工作台</template>
+            <el-menu-item index="2-1">选项1</el-menu-item>
+            <el-menu-item index="2-2">选项2</el-menu-item>
+            <el-menu-item index="2-3">选项3</el-menu-item>
+          </el-submenu>
+          <el-menu-item index="3" style="float: right"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+        </el-menu>
+      </el-header>
       <el-container>
-        <el-aside width="300px">
-          <el-menu
-              default-active="2"
-              class="el-menu-vertical-demo"
-              @open="handleOpen"
-              @close="handleClose">
-            <el-menu-item index="1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">导航一</span>
-            </el-menu-item>
-            <el-menu-item index="2">
-              <i class="el-icon-setting"></i>
-              <span slot="title">导航二</span>
-            </el-menu-item>
-          </el-menu>
-        </el-aside>
-        <el-main>
+        <nav-menu :is-collapse-prop="isCollapse"></nav-menu>
+        <!--<el-aside width="300px">-->
+          <!---->
+        <!--</el-aside>-->
+        <!--<el-container>-->
+        <el-main style="padding: 0">
+
+          <!--<div class="fl-left" @click.prevent="toggleSideBar">-->
+            <!--<div v-show="isCollapse" class="open-iocn"></div>-->
+            <!--<div v-show="!isCollapse" class="shrink-iocn"></div>-->
+          <!--</div>-->
           <router-view/>
         </el-main>
+        </el-container>
       </el-container>
-    </el-container>
+    <!--</el-container>-->
 
   </div>
 </template>
 
 <script>
+import navMenu from '@/components/NavMenu'
 export default {
+  components: { navMenu },
+  data () {
+    return {
+      isCollapse: false
+    }
+  },
   methods: {
+    // 点击展开收起
+    toggleSideBar () {
+      this.isCollapse = !this.isCollapse
+    },
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
+    },
     handleOpen (key, keyPath) {
       console.log(key, keyPath)
     },
@@ -54,7 +81,7 @@ export default {
   body {
     font-size: 12px;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    background-color: #f0f4f7;
+    /*background-color: #f0f4f7;*/
   }
 
   #app {
@@ -63,24 +90,26 @@ export default {
   }
 
   .el-header {
-    background-color: #B3C0D1;
+    /*background-color: #B3C0D1;*/
     color: #333;
     text-align: center;
     line-height: 60px;
   }
 
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-  }
+  /*.el-aside {*/
+    /*background-color: #D3DCE6;*/
+    /*color: #333;*/
+    /*text-align: center;*/
+    /*line-height: 200px;*/
+  /*}*/
 
   .el-main {
-    background-color: #E9EEF3;
+    /*background-color: #E9EEF3;*/
     color: #333;
     /*text-align: center;*/
-    line-height: 160px;
+    /*line-height: 160px;*/
+    height: 100%;
+    /*padding: 0;*/
   }
 
   body > .el-container {
@@ -89,5 +118,21 @@ export default {
 
   .el-container > .el-container {
     height: 100%;
+  }
+
+  .open-iocn {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: url(assets/open_iocn.png) no-repeat center center;
+    background-size: 14px 11px;
+  }
+
+  .shrink-iocn {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: url(assets/shrink_iocn.png) no-repeat center center;
+    background-size: 14px 11px;
   }
 </style>

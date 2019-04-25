@@ -9,8 +9,9 @@ import FundsManagement from '@/views/FundsManagement'
 import SchoolsList from '@/views/SchoolsList'
 import TeachersList from '@/views/TeachersList'
 import StudentsList from '@/views/StudentsList'
+import KnowledgeTipsTable from '@/views/KnowledgeTipsTable'
 import Setting from '@/views/Setting'
-
+import AchievementList from '@/views/AchievementList'
 
 Vue.use(Router)
 
@@ -54,14 +55,24 @@ const VueRouter = new Router({
       component: StudentsList
     },
     {
-      path: '/setting',
+      path: '/knowledgeTipsTable',
+      name: 'knowledgeTipsTable',
+      component: KnowledgeTipsTable
+    },
+    {
+      path: '/settingList',
       name: 'setting',
       component: Setting
     },
     {
+      path: '/achievementList',
+      name: 'achievement',
+      component: AchievementList
+    },
+    {
       path: '/404',
       component: NotFound,
-      name: 'NotFoundLink',
+      name: 'NotFoundLink'
     },
     {
       path: '*',

@@ -15,8 +15,9 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
+    "ugly-ui-vue": "0.0.1",
     "vue": "^2.6.6",
-    "vue-router": "^3.0.1",
+    "vue-router": "^3.0.4",
     "vue-wechat-title": "^2.0.5",
     "vuex": "^3.0.1"
   },
