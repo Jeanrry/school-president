@@ -33,21 +33,28 @@
       <!--<div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>-->
     <!--</el-collapse-item>-->
 
-    <!--<collapse v-show="collapseShow"></collapse>-->
-    <collapse-item title="测试 title" >
-      <div>第一条测试info</div>
-      <div>第二条测试info</div>
-    </collapse-item>
+    <ugly-collapse accordion>
+      <ugly-collapse-item title="测试 title">
+        <div>第一条测试info</div>
+        <div>第二条测试info</div>
+      </ugly-collapse-item>
+      <ugly-collapse-item title="测试 title">
+        <div>第一条测试info</div>
+        <div>第二条测试info</div>
+      </ugly-collapse-item>
+      <ugly-collapse-item>
+        <div>第一条测试info</div>
+        <div>第二条测试info</div>
+      </ugly-collapse-item>
+    </ugly-collapse>
+    <el-button></el-button>
+    <el-button>13</el-button>
   </div>
 </template>
 
 <script>
-// import Collapse from '../components/collapse/Collapse'
 export default {
   name: 'AchievementList',
-  // components: {
-  //   Collapse
-  // },
   data () {
     return {
       title: '成就',

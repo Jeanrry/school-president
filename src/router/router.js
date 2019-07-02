@@ -12,6 +12,7 @@ import StudentsList from '@/views/StudentsList'
 import KnowledgeTipsTable from '@/views/KnowledgeTipsTable'
 import Setting from '@/views/Setting'
 import AchievementList from '@/views/AchievementList'
+import Test from '@/views/Test'
 
 Vue.use(Router)
 
@@ -68,6 +69,11 @@ const VueRouter = new Router({
       path: '/achievementList',
       name: 'achievement',
       component: AchievementList
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     },
     {
       path: '/404',

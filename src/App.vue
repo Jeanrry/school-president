@@ -22,16 +22,7 @@
       </el-header>
       <el-container>
         <nav-menu :is-collapse-prop="isCollapse"></nav-menu>
-        <!--<el-aside width="300px">-->
-          <!---->
-        <!--</el-aside>-->
-        <!--<el-container>-->
-        <el-main style="padding: 0">
-
-          <!--<div class="fl-left" @click.prevent="toggleSideBar">-->
-            <!--<div v-show="isCollapse" class="open-iocn"></div>-->
-            <!--<div v-show="!isCollapse" class="shrink-iocn"></div>-->
-          <!--</div>-->
+        <el-main style="padding: 0;">
           <router-view/>
         </el-main>
         </el-container>
@@ -104,10 +95,7 @@ export default {
   /*}*/
 
   .el-main {
-    /*background-color: #E9EEF3;*/
     color: #333;
-    /*text-align: center;*/
-    /*line-height: 160px;*/
     height: 100%;
     /*padding: 0;*/
   }
@@ -134,5 +122,8 @@ export default {
     cursor: pointer;
     background: url(assets/shrink_iocn.png) no-repeat center center;
     background-size: 14px 11px;
+  }
+  div {
+    display: block;
   }
 </style>

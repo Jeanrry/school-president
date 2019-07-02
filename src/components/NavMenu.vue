@@ -21,7 +21,8 @@
               :key="item.url"
               :index="item.url"
               :route="item.url">
-            <span :class="item.icon" class="iconfont nav-ico"></span>
+            <ugly-icon :icon="item.icon"></ugly-icon>
+            <!--<span :class="item.icon" class="iconfont nav-ico"></span>-->
             <span slot="title">{{item.name}}</span>
           </el-menu-item>
 
@@ -31,7 +32,8 @@
               :key="item.url"
               :index="item.url">
             <template slot="title">
-              <span :class="item.icon" class="iconfont nav-ico"></span>
+              <ugly-icon :icon="item.icon"></ugly-icon>
+              <!--<span :class="item.icon" class="iconfont nav-ico"></span>-->
               <span slot="title">{{item.name}}</span>
             </template>
             <el-menu-item v-for="term in item.child" :key="term.url" :index="term.url" :route="term.url">
@@ -139,6 +141,12 @@ export default {
               name: '成就'
             }
           ]
+        },
+        {
+          id: '7',
+          name: '测试页面',
+          url: '/test',
+          icon: 'icon-zhifu'
         }
       ]
     },
