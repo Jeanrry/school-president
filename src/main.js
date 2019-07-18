@@ -12,7 +12,9 @@ import VueWeChatTitle from 'vue-wechat-title'
 
 // import './assets/icon/iconfont.css'
 
+// uglyui
 import UglyComponent from './components/UglyComponent'
+
 Vue.use(UglyComponent)
 
 Vue.use(ElementUI)

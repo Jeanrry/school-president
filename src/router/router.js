@@ -1,28 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
-import NotFound from '@/views/NotFound'
-
-import FundsManagement from '@/views/FundsManagement'
-import SchoolsList from '@/views/SchoolsList'
-import TeachersList from '@/views/TeachersList'
-import StudentsList from '@/views/StudentsList'
-import KnowledgeTipsTable from '@/views/KnowledgeTipsTable'
-import Setting from '@/views/Setting'
-import AchievementList from '@/views/AchievementList'
-import Test from '@/views/Test'
-
 Vue.use(Router)
 
 const VueRouter = new Router({
   mode: 'history',
   routes: [
-    {
+    { // 主页
       path: '/home',
       name: 'home',
-      component: Home
+      component: resolve => require(['@/views/Home'], resolve)
     },
     {
       path: '/',
@@ -30,55 +17,60 @@ const VueRouter = new Router({
         path: '/home'
       }
     },
-    {
+    { // 预制页面
       path: '/about',
       name: 'about',
-      component: About
+      component: resolve => require(['@/views/About'], resolve)
     },
     {
       path: '/fundsManagement',
       name: 'fundsManagement',
-      component: FundsManagement
+      component: resolve => require(['@/views/FundsManagement'], resolve)
     },
     {
       path: '/schoolsList',
       name: 'schoolsList',
-      component: SchoolsList
+      component: resolve => require(['@/views/SchoolsList'], resolve)
     },
     {
       path: '/teachersList',
       name: 'teachersList',
-      component: TeachersList
+      component: resolve => require(['@/views/TeachersList'], resolve)
     },
     {
       path: '/studentsList',
       name: 'studentsList',
-      component: StudentsList
+      component: resolve => require(['@/views/StudentsList'], resolve)
     },
     {
-      path: '/knowledgeTipsTable',
-      name: 'knowledgeTipsTable',
-      component: KnowledgeTipsTable
+      path: '/skillTree',
+      name: 'skillTree',
+      component: resolve => require(['@/views/SkillTree'], resolve)
     },
     {
       path: '/settingList',
       name: 'setting',
-      component: Setting
+      component: resolve => require(['@/views/Setting'], resolve)
     },
     {
       path: '/achievementList',
       name: 'achievement',
-      component: AchievementList
+      component: resolve => require(['@/views/AchievementList'], resolve)
+    },
+    {
+      path: '/encyclopedia',
+      name: 'encyclopedia',
+      component: resolve => require(['@/views/Encyclopedia'], resolve)
     },
     {
       path: '/test',
       name: 'test',
-      component: Test
+      component: resolve => require(['@/views/Test'], resolve)
     },
     {
       path: '/404',
-      component: NotFound,
-      name: 'NotFoundLink'
+      name: 'NotFoundLink',
+      component: resolve => require(['@/views/NotFound'], resolve)
     },
     {
       path: '*',

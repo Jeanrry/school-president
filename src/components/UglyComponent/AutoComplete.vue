@@ -1,32 +1,32 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
   <div class="ugly-auto-complete">
-    <input
-        class="ugly-auto-complete__input"
-        :class="uglyAutoCompleteClass"
-        type="text"
-        :placeholder="placeholder"
-        :value="value"
-        ref="input"
-        :disabled="disabled"
-        @focus="inputFocused"
-        @blur="inputBlured"
-        @input="$emit('valueChanged', $event.target.value)"/>
-    <div
-        v-if="inputFocus"
-        class="ugly-autocomplete-suggestion"
-        @mouseover="dropdownMouseover"
-        @mouseout="dropdownMouseout"
-        @click="dropdownClick">
+  <input
+      class="ugly-auto-complete__input"
+      :class="uglyAutoCompleteClass"
+      type="text"
+      :placeholder="placeholder"
+      :value="value"
+      ref="input"
+      :disabled="disabled"
+      @focus="inputFocused"
+      @blur="inputBlured"
+      @input="$emit('valueChanged', $event.target.value)"/>
+  <div
+      v-if="inputFocus"
+      class="ugly-autocomplete-suggestion"
+      @mouseover="dropdownMouseover"
+      @mouseout="dropdownMouseout"
+      @click="dropdownClick">
 
-      <ugly-vertical-scrollbar class="ugly-autocomplete-suggestion__scrollbar">
-        <ul>
-          <!--<template v-slot:header></template>-->
-          <li v-for="item in suggestionList" :key="item.value" @click="listClick(item)" class="ugly-autocomplete-suggestion__dropdown-list">{{ item.title }}
-          </li>
-        </ul>
-      </ugly-vertical-scrollbar>
-    </div>
+    <ugly-vertical-scrollbar class="ugly-autocomplete-suggestion__scrollbar">
+      <ul>
+        <!--<template v-slot:header></template>-->
+        <li v-for="item in suggestionList" :key="item.value" @click="listClick(item)" class="ugly-autocomplete-suggestion__dropdown-list">{{ item.title }}
+        </li>
+      </ul>
+    </ugly-vertical-scrollbar>
   </div>
+</div>
 </template>
 
 <script>

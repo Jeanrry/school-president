@@ -118,16 +118,22 @@ export default {
           id: '4',
           name: '学生列表',
           url: '/studentsList',
-          icon: 'icon-bianji'
+          icon: 'icon-xueshimao'
         },
         {
           id: '5',
           name: '技能图谱',
-          url: '/knowledgeTipsTable',
-          icon: 'icon-shuji'
+          url: '/skillTree',
+          icon: 'icon-bianji1'
         },
         {
           id: '6',
+          name: '游戏百科',
+          url: '/encyclopedia',
+          icon: 'icon-shuji'
+        },
+        {
+          id: '7',
           name: '设置',
           url: '/settingManagement',
           icon: 'icon-shezhi',
@@ -143,7 +149,7 @@ export default {
           ]
         },
         {
-          id: '7',
+          id: '8',
           name: '测试页面',
           url: '/test',
           icon: 'icon-zhifu'
